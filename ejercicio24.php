@@ -1,14 +1,18 @@
 <?php
 // La premisa de la POO es que todo debe de ser tratado como un objeto
+// HERENCIA podemos construir una clase a partir de otra 
+
 
 
 class person{
 
-    public $nombre; //Propiedad
+    //Propiedades
+    public $nombre; 
     private $edad;
     private $altura;
 
-    public function AddName($newName) //Metodo o acciones
+    //Metodo o acciones
+    public function AddName($newName) 
     {
         $this->nombre=$newName;
     }
@@ -26,18 +30,41 @@ class person{
 
 }
 
-$objAlumno = new person(); //El objeto no es mas que la instancia de una clase
-$objAlumno->AddName("John"); //Llamando un metodo
-$objAlumno->ImprimirName();
+class trabajador extends person
+{
+    public $puesto; //Propiedad nueva
 
-echo $objAlumno->nombre."<br/>"; //Imprimir una propiedad
+    public function presentarTrabajador()
+    {
+        echo "Hola soy ".$this->nombre. "y mi cargo es de ".$this->puesto;
+    }
+}
 
-$objAlumno2 = New person();
-$objAlumno2->AddName("Carlos");
 
-echo $objAlumno2->nombre."<br/>";
-echo $objAlumno2->getAge();
 
+
+
+// INSTANCIOS DE LAS CLASES
+
+$objTrabajador = new trabajador();
+$objTrabajador->AddName("John");
+  
+$objTrabajador->puesto="Profesor";
+$objTrabajador->presentarTrabajador();
 
 
 ?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HERENCIA</title>
+</head>
+<body>
+    
+</body>
+</html>

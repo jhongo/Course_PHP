@@ -18,7 +18,7 @@
                 break;
             
             default:
-                echo "No presiono ninguna de las opcionez";
+                echo "No presiono ninguna de las opciones";
                 break;
         }
 
