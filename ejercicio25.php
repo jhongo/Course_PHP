@@ -8,12 +8,21 @@ class person{
     private $edad;
     private $altura;
 
+
+    // Constructor
+    function __construct($newName){
+        $this->nombre= $newName;
+
+
+    }
+
+
     public function AddName($newName) //Metodo o acciones
     {
         $this->nombre=$newName;
     }
 
-    public function ImprimirName()
+    public function PrintName()
     {
         echo "Hola ". $this->nombre."<br/>";
     }
@@ -26,17 +35,9 @@ class person{
 
 }
 
-$objAlumno = new person(); //El objeto no es mas que la instancia de una clase
-$objAlumno->AddName("John"); //Llamando un metodo
-$objAlumno->ImprimirName();
-
-echo $objAlumno->nombre."<br/>"; //Imprimir una propiedad
-
-$objAlumno2 = New person();
-$objAlumno2->AddName("Carlos");
-
-echo $objAlumno2->nombre."<br/>";
-echo $objAlumno2->getAge();
+$objAlumno = new person("John Carlos"); //El objeto no es mas que la instancia de una clase
+// $objAlumno->AddName("John"); //Llamando un metodo AddName
+$objAlumno->PrintName(); //Llamando al objeto imprimir nombre
 
 
 
