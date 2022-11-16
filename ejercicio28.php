@@ -19,7 +19,7 @@
         // print_r($resultado);
         foreach ($resultado as $foto) {
           // echo $resultado[$i]."<br/>";
-          print_r($foto['id']." ".$foto['nombre']."<br/>");
+          print_r($foto['id']." ".$foto['nombre']." ".$foto["ruta"]. "<br/>");
         }
 
         echo "Successful connection";
