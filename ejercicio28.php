@@ -9,6 +9,7 @@
         $connection = new PDO("mysql:host=$server:3307; dbname=album",$user,$password);
         $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
 
+        // QUERY SQL
         $sql="SELECT * FROM `fotos`";
         $sentencia=$connection->prepare($sql);
         $sentencia->execute();
@@ -18,7 +19,7 @@
         // print_r($resultado);
         foreach ($resultado as $foto) {
           // echo $resultado[$i]."<br/>";
-          print_r($foto['nombre']);
+          print_r($foto['id']." ".$foto['nombre']."<br/>");
         }
 
         echo "Successful connection";
